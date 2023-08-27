@@ -9,6 +9,9 @@ module.exports = {
       fontFamily: {
         mono: ["var(--font-roboto-mono)", ...fontFamily.sans],
       },
+      animation: {
+        "spin-slow": "spin 7s linear infinite",
+      },
       colors: {
         dark: "#1b1b1b",
         light: "#f5f5f5",
