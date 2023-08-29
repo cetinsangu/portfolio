@@ -8,6 +8,9 @@ import React from "react";
 import githubsearcher from "../../public/images/projects/githubsearcher.png";
 import triviapp from "../../public/images/projects/triviapp.png";
 import vuetodo from "../../public/images/projects/vuetodo.png";
+import { motion } from "framer-motion";
+
+const FramerImage = motion(Image);
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
@@ -18,7 +21,13 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
         target="_blank"
         className="w-1/2 cursor-pointer overflow-hidden rounded-lg "
       >
-        <Image src={img} alt={title} className="w-full h-auto" />
+        <FramerImage
+          src={img}
+          alt={title}
+          className="w-full h-auto"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.2 }}
+        />
       </Link>
       <div className="w-1/2 flex flex-col justify-between pl-6">
         <span className="text-green-600 font-medium text-xl">{type}</span>
@@ -56,7 +65,13 @@ const OrdinaryProject = ({ type, title, img, link, github }) => {
         target="_blank"
         className="w-full cursor-pointer overflow-hidden rounded-lg "
       >
-        <Image src={img} alt={title} className="w-full h-auto" />
+        <FramerImage
+          src={img}
+          alt={title}
+          className="w-full h-auto"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.2 }}
+        />
       </Link>
       <div className="w-full flex flex-col justify-between mt-4">
         <span className="text-green-600 font-medium text-xl">{type}</span>

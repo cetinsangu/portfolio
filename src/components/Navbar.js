@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter();
   const isActive = router.asPath === href;
-  console.log(href);
   return (
     <Link className={`${className} relative group`} href={href}>
       {title}
@@ -29,7 +28,7 @@ const Navbar = () => {
         <CustomLink href="/" title="Home" className="mr-4" />
         <CustomLink href="/about" title="About" className="mx-4" />
         <CustomLink href="/projects" title="Projects" className="mx-4" />
-        <CustomLink href="/articles" title="Article" className="ml-4" />
+        <CustomLink href="/blog" title="Blog" className="ml-4" />
       </nav>
       <nav className="flex items-center justify-center flex-wrap">
         <motion.a
