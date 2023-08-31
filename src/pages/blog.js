@@ -5,8 +5,10 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useRef } from "react";
 import articleOne from "../../public/images/blog/unveiling.png";
-import articleTwo from "../../public/images/blog/symphony.png";
+import articleTwo from "../../public/images/blog/craft.png";
 import articleListOne from "../../public/images/blog/meteor.png";
+import articleListTwo from "../../public/images/blog/kanban.png";
+import articleListThree from "../../public/images/blog/remindme.png";
 
 import { motion, useMotionValue } from "framer-motion";
 
@@ -28,32 +30,40 @@ const MovingImg = ({ title, img, link }) => {
     x.set(0);
     y.set(0);
   };
-
-  <Link
-    href={link}
-    target="_blank"
-    onMouseMove={mouseMove}
-    onMouseLeave={mouseLeave}
-  >
-    <h2 className="capitalize text-xl font-semibold hover:underline">
-      {title}
-    </h2>
-    <FramerImage
-      style={{ x: x, y: y }}
-      ref={imgRef}
-      src={img}
-      alt={title}
-      className="w-96 h-auto hidden absolute rounded-lg"
-    />
-  </Link>;
+  return (
+    <Link
+      href={link}
+      target="_blank"
+      onMouseMove={mouseMove}
+      onMouseLeave={mouseLeave}
+    >
+      <h2 className="capitalize text-xl font-semibold hover:underline">
+        {title}
+      </h2>
+      <FramerImage
+        style={{ x: x, y: y }}
+        ref={imgRef}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1, transition: { duraton: 0.2 } }}
+        src={img}
+        alt={title}
+        className="z-10 w-96 h-auto hidden absolute rounded-lg"
+      />
+    </Link>
+  );
 };
 
 const ArticleList = ({ img, title, date, link }) => {
   return (
-    <li className="relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid border-dark border-r-4 border-b-4">
+    <motion.li
+      initial={{ y: 200 }}
+      whileInView={{ y: 0, transition: 0.5, ease: "easeInOut" }}
+      viewport={{ once: true }}
+      className="relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid border-dark border-r-4 border-b-4"
+    >
       <MovingImg title={title} img={img} link={link} />
       <span className="text-green-600 font-semibold pl-4">{date} </span>
-    </li>
+    </motion.li>
   );
 };
 
@@ -127,7 +137,7 @@ const blog = () => {
           <h2 className="font-bold text-4xl w-full text-center my-16 mt-32">
             All Articles
           </h2>
-          <ul>
+          <ul className="mb-16">
             <ArticleList
               title={"How to Create a Meteor Effect with React and TailwindCSS"}
               date={"August 28, 2023"}
@@ -135,16 +145,20 @@ const blog = () => {
               img={articleListOne}
             />
             <ArticleList
-              title={"How to Create a Meteor Effect with React and TailwindCSS"}
-              date={"August 28, 2023"}
+              title={
+                "Build a drag and drop Kanban Board with React, Typescript, Tailwind, Dnd-Kit"
+              }
+              date={"August 29, 2023"}
               link={"/"}
-              img={articleListOne}
+              img={articleListTwo}
             />
             <ArticleList
-              title={"How to Create a Meteor Effect with React and TailwindCSS"}
-              date={"August 28, 2023"}
+              title={
+                "Build a Full Stack ReminderApp with React, NextJs, Typescript, ServerAction, Zod, Hook-form, Prisma, and Tailwind"
+              }
+              date={"August 31, 2023"}
               link={"/"}
-              img={articleListOne}
+              img={articleListThree}
             />
           </ul>
         </Layout>

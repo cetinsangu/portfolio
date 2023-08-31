@@ -143,38 +143,6 @@ const projects = () => {
                 link="https://www.vuetodo.cetinsangu.com/"
               />
             </div>
-            <div className="col-span-12">
-              <FeaturedProject
-                type={"Featured Project"}
-                img={githubsearcher}
-                title={"Github Searcher"}
-                summary={
-                  "Developed an engaging web application using ReactJS, React Router, and Tailwind CSS, integrated with Firebase for authentication. The project showcases a visually stunning user interface with smooth animations powered by Framer Motion, and features a night mode for enhanced user experience. Leveraged ChartJS to visualize GitHub data, allowing users to seamlessly search and explore both their own and other users' accounts. Implemented real-time interactivity with Toastify notifications. This project demonstrates strong front-end development skills, UI/UX design, authentication systems, and data visualization."
-                }
-                link="https://www.githubsearcher.cetinsangu.com"
-                github={"https://github.com/cetinsangu/githubsearcher"}
-              />
-            </div>
-            <div className="col-span-6">
-              {" "}
-              <OrdinaryProject
-                type={"Project"}
-                img={triviapp}
-                title={"TriviApp"}
-                github={"https://github.com/cetinsangu/triviapp"}
-                link="https://triviapp.cetinsangu.com/"
-              />
-            </div>
-            <div className="col-span-6">
-              <OrdinaryProject
-                type={"Project"}
-                img={vuetodo}
-                title={"VueToDo"}
-                github={"https://github.com/cetinsangu/vuetodo"}
-                link="https://www.vuetodo.cetinsangu.com/"
-              />
-            </div>
-            T
           </div>
         </Layout>
       </main>
