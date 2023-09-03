@@ -40,7 +40,7 @@ const about = () => {
         <title>Çetin Sanğu | About Page</title>
         <meta name="description" content="any desc"></meta>
       </Head>
-      <main className="flex w-full flex-col items-center justify-center">
+      <main className="flex w-full flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
           <AnimatedText
             text="Passion Fuels Purpose!"
@@ -48,7 +48,7 @@ const about = () => {
           ></AnimatedText>
           <div className="grid w-full grid-cols-8 gap-16">
             <div className="col-span-3 flex flex-col items-start justify-start">
-              <h2 className="mb-4 text-lg font-bold uppercase text-dark/50">
+              <h2 className="mb-4 text-lg font-bold uppercase text-dark/50 dark:text-light">
                 Biography
               </h2>
               <p className="font-medium">
@@ -82,12 +82,12 @@ const about = () => {
                 className="w-full h-auto rounded-2xl"
               />
             </div>
-            <div className="col-span-2 flex flex-col items-end justify-between">
-              <div className="flex flex-col items-end justify-center">
+            <div className="col-span-2 flex flex-col items-end justify-between ">
+              <div className="flex flex-col items-end justify-center text-dark dark:text-light">
                 <span className="inline-block text-7xl font-bold">
                   <AnimNumber value={50} />+
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark">
+                <h2 className="text-xl font-medium capitalize">
                   satisfied clients
                 </h2>
               </div>
@@ -95,7 +95,7 @@ const about = () => {
                 <span className="inline-block text-7xl font-bold">
                   <AnimNumber value={30} />+
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark">
+                <h2 className="text-xl font-medium capitalize">
                   projects completed
                 </h2>
               </div>
@@ -103,7 +103,7 @@ const about = () => {
                 <span className="inline-block text-7xl font-bold">
                   <AnimNumber value={1} />+
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark">
+                <h2 className="text-xl font-medium capitalize">
                   years of experience
                 </h2>
               </div>
