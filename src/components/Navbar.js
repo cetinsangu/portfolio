@@ -40,8 +40,9 @@ const Navbar = () => {
           className="w-8 mx-2"
           whileTap={{ scale: 0.9 }}
         >
-          <XIcon />
+          <XIcon className={mode === "dark" ? "fill-white" : "fill-dark"} />
         </motion.a>
+
         <motion.a
           href="https://github.com/cetinsangu"
           target={"_blank"}

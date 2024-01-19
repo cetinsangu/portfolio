@@ -36,11 +36,13 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
           target="_blank"
           className="hover:underline underline-offset-2"
         >
-          <h2 className="my-2 w-full text-left text-4xl font-bold">{title}</h2>
+          <h2 className="my-2 w-full text-left text-4xl font-bold dark:text-light">
+            {title}
+          </h2>
         </Link>
-        <p className="my-2 font-medium text-dark">{summary}</p>
+        <p className="my-2 font-medium text-dark dark:text-light">{summary}</p>
         <div className="mt-2 flex items-center">
-          <Link href={github} target="_blank" className="w-10">
+          <Link href={github} target="_blank" className="w-10 dark:text-light">
             <GithubIcon />
           </Link>
           <Link
@@ -58,12 +60,12 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
 
 const OrdinaryProject = ({ type, title, img, link, github }) => {
   return (
-    <article className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative dark:bg-light dark:border-light">
+    <article className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative dark:bg-dark dark:border-light">
       <div className="absolute top-0 -right-3 -z-10 w-[100%] h-[103%] rounded-[2rem] bg-dark rounded-br-2xl" />
       <Link
         href={link}
         target="_blank"
-        className="w-full cursor-pointer overflow-hidden rounded-lg "
+        className="w-full cursor-pointer overflow-hidden rounded-lg dark:text-light"
       >
         <FramerImage
           src={img}
@@ -80,17 +82,19 @@ const OrdinaryProject = ({ type, title, img, link, github }) => {
           target="_blank"
           className="hover:underline underline-offset-2"
         >
-          <h2 className="my-2 w-full text-left text-2xl font-bold">{title}</h2>
+          <h2 className="my-2 w-full text-left text-2xl font-bold dark:text-light">
+            {title}
+          </h2>
         </Link>
         <div className="w-full mt-2 flex items-center justify-between">
           <Link
-            className="text-lg font-semibold underline"
+            className="text-lg font-semibold underline dark:text-light"
             href={link}
             target="_blank"
           >
             Visit
           </Link>
-          <Link href={github} target="_blank" className="w-10">
+          <Link href={github} target="_blank" className="w-10 dark:text-light">
             <GithubIcon />
           </Link>
         </div>

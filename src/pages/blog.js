@@ -59,7 +59,7 @@ const ArticleList = ({ img, title, date, link }) => {
       initial={{ y: 200 }}
       whileInView={{ y: 0, transition: 0.5, ease: "easeInOut" }}
       viewport={{ once: true }}
-      className="relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid border-dark border-r-4 border-b-4"
+      className="relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid border-dark border-r-4 border-b-4 dark:bg-dark dark:text-light dark:border-light"
     >
       <MovingImg title={title} img={img} link={link} />
       <span className="text-green-600 font-semibold pl-4">{date} </span>
@@ -69,7 +69,7 @@ const ArticleList = ({ img, title, date, link }) => {
 
 const FeaturedArticle = ({ img, title, time, summary, link }) => {
   return (
-    <li className="relative col-span-1 w-full p-4 bg-light border border-solid border-dark rounded-2xl">
+    <li className="relative col-span-1 w-full p-4 bg-light border border-solid border-dark rounded-2xl dark:bg-dark dark:border-light dark:text-light">
       <div className="absolute top-0 -right-3 -z-10 w-[100%] h-[103%] rounded-[2rem] bg-dark rounded-br-2xl" />
       <Link
         href={link}
@@ -105,9 +105,7 @@ const blog = () => {
       <main className="w-full flex flex-col items-center justify-center overflow-hidden ">
         <Layout className="pt-16">
           <AnimatedText
-            text={
-              "Exploring Ideas, Inspiring Minds: Unlocking the Digital Realm!"
-            }
+            text={"Exploring Ideas, Inspiring Minds..."}
             className="mb-12"
           />
           <ul className="grid grid-cols-2 gap-16">
@@ -134,7 +132,7 @@ const blog = () => {
               link="/"
             />
           </ul>
-          <h2 className="font-bold text-4xl w-full text-center my-16 mt-32">
+          <h2 className="font-bold text-4xl w-full text-center my-16 mt-32 dark:text-light">
             All Articles
           </h2>
           <ul className="mb-16">
