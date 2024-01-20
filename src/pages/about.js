@@ -57,10 +57,10 @@ const about = () => {
                 Biography
               </h2>
               <p className="font-medium">
-                Hello, I'm Çetin, a dedicated full stack web developer deeply
-                passionate about crafting visually appealing, functional, and
-                user-centric digital experiences. Over the past 2 years in the
-                field, I've immersed myself in the dynamic world of web
+                Hello, I&apos;m Çetin, a dedicated full stack web developer
+                deeply passionate about crafting visually appealing, functional,
+                and user-centric digital experiences. Over the past 2 years in
+                the field, I&apos;ve immersed myself in the dynamic world of web
                 development, gaining valuable insights into creating seamless
                 and engaging online interfaces.
               </p>
@@ -70,7 +70,7 @@ const about = () => {
                 My journey has been marked by a commitment to delivering
                 high-quality work that not only meets technical standards but
                 also addresses the unique needs of users. Embracing challenges
-                as opportunities for growth, I've honed my problem-solving
+                as opportunities for growth, I&apos;ve honed my problem-solving
                 skills and stayed updated on the latest trends and technologies
                 in the ever-evolving landscape of web development.{" "}
               </p>
@@ -78,7 +78,7 @@ const about = () => {
               <p className="font-medium">
                 My enthusiasm for continuous learning and my ability to blend
                 technical expertise with a user-focused approach define my
-                professional ethos. I'm excited about the prospect of
+                professional ethos. I&apos;m excited about the prospect of
                 contributing my skills to innovative projects and further
                 expanding my horizons in this dynamic field.
               </p>

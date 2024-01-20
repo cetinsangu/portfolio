@@ -42,8 +42,8 @@ export default function Home() {
                 web applications to responsive designs. Discover how my
                 expertise in front-end and back-end technologies, combined with
                 innovative and user-centric approaches, can elevate your online
-                presence. Let's bring your ideas to life through cutting-edge
-                web solutions.
+                presence. Let&apos;s bring your ideas to life through
+                cutting-edge web solutions.
               </p>
               <div className="flex items-center self-start mt-2 lg:self-center">
                 <Link
