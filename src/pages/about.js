@@ -8,6 +8,7 @@ import { spring, useInView, useMotionValue, useSpring } from "framer-motion";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
+import Transition from "@/components/Transition";
 
 const AnimNumber = ({ value }) => {
   const ref = useRef(null);
@@ -38,12 +39,16 @@ const about = () => {
     <>
       <Head>
         <title>Çetin Sanğu | About Page</title>
-        <meta name="description" content="any desc"></meta>
+        <meta
+          name="description"
+          content="Discover the story behind my journey as a passionate full-stack web developer. From the early days of coding to mastering the latest technologies, I bring a wealth of experience to the table. Learn about my skills, projects, and commitment to delivering innovative web solutions. Explore how my dedication to continuous learning drives success in every aspect of web development."
+        ></meta>
       </Head>
+      <Transition />
       <main className="flex w-full flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
           <AnimatedText
-            text="Passion Fuels Purpose!"
+            text="Transforming Ideas into Exceptional Digital Experiences"
             className="mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
           ></AnimatedText>
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
@@ -52,26 +57,30 @@ const about = () => {
                 Biography
               </h2>
               <p className="font-medium">
-                Hi, I'm Çetin, a full stack web developer with a passion for
-                creating beautiful, functional, and user-centered digital
-                experiences. With 4 years of experience in the field. I am
-                always looking for new and innovative ways to bring my clients'
-                visions to life.
+                Hello, I'm Çetin, a dedicated full stack web developer deeply
+                passionate about crafting visually appealing, functional, and
+                user-centric digital experiences. Over the past 2 years in the
+                field, I've immersed myself in the dynamic world of web
+                development, gaining valuable insights into creating seamless
+                and engaging online interfaces.
               </p>
 
               <p className="my-4 font-medium">
                 {" "}
-                I believe that design is about more than just making things look
-                pretty – it's about solving problems and creating intuitive,
-                enjoyable experiences for users.{" "}
+                My journey has been marked by a commitment to delivering
+                high-quality work that not only meets technical standards but
+                also addresses the unique needs of users. Embracing challenges
+                as opportunities for growth, I've honed my problem-solving
+                skills and stayed updated on the latest trends and technologies
+                in the ever-evolving landscape of web development.{" "}
               </p>
 
               <p className="font-medium">
-                Whether I'm working on a website, mobile app, or other digital
-                product, I bring my commitment to design excellence and
-                user-centered thinking to every project I work on. I look
-                forward to the opportunity to bring my skills and passion to
-                your next project.
+                My enthusiasm for continuous learning and my ability to blend
+                technical expertise with a user-focused approach define my
+                professional ethos. I'm excited about the prospect of
+                contributing my skills to innovative projects and further
+                expanding my horizons in this dynamic field.
               </p>
             </div>
             <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 xl:col-span-4 md:order-1 md:col-span-8">
@@ -87,7 +96,7 @@ const about = () => {
             <div className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3">
               <div className="flex flex-col items-end justify-center text-dark dark:text-light xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimNumber value={50} />+
+                  <AnimNumber value={2} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize xl:text-center md:text-lg sm:text-base xs:text-sm">
                   satisfied clients
@@ -95,7 +104,7 @@ const about = () => {
               </div>
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimNumber value={30} />+
+                  <AnimNumber value={10} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize xl:text-center md:text-lg sm:text-base xs:text-sm">
                   projects completed

@@ -11,6 +11,7 @@ import articleListTwo from "../../public/images/blog/kanban.png";
 import articleListThree from "../../public/images/blog/remindme.png";
 
 import { motion, useMotionValue } from "framer-motion";
+import Transition from "@/components/Transition";
 
 const FramerImage = motion(Image);
 
@@ -47,7 +48,7 @@ const MovingImg = ({ title, img, link }) => {
         whileInView={{ opacity: 1, transition: { duraton: 0.2 } }}
         src={img}
         alt={title}
-        className="z-10 w-96 h-auto hidden absolute rounded-lg"
+        className="z-10 w-96 h-auto hidden absolute rounded-lg md:!hidden"
       />
     </Link>
   );
@@ -59,10 +60,12 @@ const ArticleList = ({ img, title, date, link }) => {
       initial={{ y: 200 }}
       whileInView={{ y: 0, transition: 0.5, ease: "easeInOut" }}
       viewport={{ once: true }}
-      className="relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid border-dark border-r-4 border-b-4 dark:bg-dark dark:text-light dark:border-light"
+      className="relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid border-dark border-r-4 border-b-4 dark:bg-dark dark:text-light dark:border-light sm:flex-col"
     >
       <MovingImg title={title} img={img} link={link} />
-      <span className="text-green-600 font-semibold pl-4">{date} </span>
+      <span className="text-green-600 font-semibold pl-4 sm:self-start sm:pl-0 xs:text-sm">
+        {date}{" "}
+      </span>
     </motion.li>
   );
 };
@@ -87,7 +90,7 @@ const FeaturedArticle = ({ img, title, time, summary, link }) => {
         />
       </Link>
       <Link href={link} target="_blank">
-        <h2 className="capitalize text-2xl font-bold my-2 mt-4 hover:underline">
+        <h2 className="capitalize text-2xl font-bold my-2 mt-4 hover:underline xs:text-lg">
           {title}
         </h2>
       </Link>
@@ -102,15 +105,19 @@ const blog = () => {
     <>
       <Head>
         <title>Çetin Sanğu | Blog</title>
-        <meta name="description" content="blog"></meta>
+        <meta
+          name="description"
+          content="Explore insightful articles and valuable insights on web development, coding tips, and technology trends. As a full-stack web developer, I share my expertise on diverse topics to help you stay ahead in the ever-evolving world of web development. Dive into a wealth of knowledge to enhance your skills and discover innovative solutions for your projects."
+        ></meta>
       </Head>
+      <Transition />
       <main className="w-full flex flex-col items-center justify-center overflow-hidden ">
         <Layout className="pt-16">
           <AnimatedText
             text={"Exploring Ideas, Inspiring Minds..."}
-            className="mb-12"
+            className="mb-12 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
-          <ul className="grid grid-cols-2 gap-16">
+          <ul className="grid grid-cols-2 gap-16 lg:gap-8 md:grid-cols-1 md:gap-y-16">
             <FeaturedArticle
               title={
                 "Unveiling the Magic of Full-Stack Development: From Code to Creativity"
